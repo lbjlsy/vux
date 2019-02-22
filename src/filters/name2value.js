@@ -7,8 +7,8 @@ const specialMap = {
   '上海市': '310000',
   '重庆市': '500000'
 }
-
-// const specialMap = {
+// 这是原来的框架代码
+// const specialMap = { 
 //   '北京市': '110100',
 //   '天津市': '120100',
 //   '上海市': '310100',
@@ -30,7 +30,8 @@ export default function (name, list) {
         }
       }
       return find(list, item => {
-        return item.name === one && item.parent === parent.value
+        return item.name === one
+//         return item.name === one && item.parent === parent.value 这是原来的框架代码
       })
     } else {
       if (index === 1 && specialMap[name[0]]) {
