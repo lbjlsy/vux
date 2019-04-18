@@ -547,10 +547,10 @@ export default {
         this.validate()
       }
 
-      let selection = this.$refs.input.selectionStart
-      let direction = newVal.length - oldVal.length
-      selection = this._getInputMaskSelection(selection, direction, this.maskValue(newVal))
-      this.lastDirection = direction
+      let selection = null
+      // let direction = newVal.length - oldVal.length
+      // selection = this._getInputMaskSelection(selection, direction, this.maskValue(newVal))
+      // this.lastDirection = direction
       this.$emit('input', this.maskValue(newVal))
       // #2810
       this.$nextTick(() => {
