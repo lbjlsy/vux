@@ -553,15 +553,15 @@ export default {
       // this.lastDirection = direction
       this.$emit('input', this.maskValue(newVal))
       // #2810
-      this.$nextTick(() => {
-        if (this.$refs.input.selectionStart !== selection) {
-          this.$refs.input.selectionStart = selection
-          this.$refs.input.selectionEnd = selection
-        }
-        if (this.currentValue !== this.maskValue(newVal)) {
-          this.currentValue = this.maskValue(newVal)
-        }
-      })
+      // this.$nextTick(() => {
+      //   if (this.$refs.input.selectionStart !== selection) {
+      //     this.$refs.input.selectionStart = selection
+      //     this.$refs.input.selectionEnd = selection
+      //   }
+      //   if (this.currentValue !== this.maskValue(newVal)) {
+      //     this.currentValue = this.maskValue(newVal)
+      //   }
+      // })
 
       if (this._debounce) {
         this._debounce()
